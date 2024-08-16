@@ -4,4 +4,3 @@
 
 [<img align="left" alt="Cat_1" width="300px" src="./screenshots/1.png"/>]
 [<img align="left" alt="Cat_2" width="300px" src="./screenshots/2.png"/>]
-[<img align="left" alt="Cat_3" width="300px" src="./screenshots/3.png"/>]
