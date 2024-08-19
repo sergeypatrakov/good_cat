@@ -16,33 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-wq-778">
-                                <rect key="frame" x="32" y="91" width="329" height="256"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultcat" translatesAutoresizingMaskIntoConstraints="NO" id="hbb-sh-7sO">
-                                <rect key="frame" x="-91" y="409" width="602" height="485"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzf-3g-EbK">
-                                <rect key="frame" x="85" y="513" width="243" height="339"/>
+                                <rect key="frame" x="75" y="493" width="243" height="339"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="hnW-OS-w1R" kind="show" id="JS5-om-A9U"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATP-e2-B0H">
-                                <rect key="frame" x="85" y="379" width="235" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Попробуй нажать на cюда"/>
-                                <connections>
-                                    <action selector="buttonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRK-T9-FQz"/>
+                                    <segue destination="hnW-OS-w1R" kind="showDetail" id="JS5-om-A9U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,10 +30,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="zgV-8v-BHB"/>
-                    <connections>
-                        <outlet property="buttonFirstViewController" destination="ATP-e2-B0H" id="yg0-mh-lge"/>
-                        <outlet property="textFirstViewController" destination="BRX-wq-778" id="WBe-KB-Dzm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,15 +43,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catEyes" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-pr-yAC">
-                                <rect key="frame" x="-142" y="380" width="677" height="521"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYR-WT-xyO">
-                                <rect key="frame" x="118" y="303" width="158" height="35"/>
+                                <rect key="frame" x="185" y="314" width="24" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Я хочу рыбов 🐟"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <segue destination="tW5-op-Vw3" kind="show" id="mFG-Sp-Ehm"/>
                                 </connections>
@@ -159,6 +131,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llh-7X-95p">
+                                <rect key="frame" x="127" y="286" width="140" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Test Constraint"/>
+                                <connections>
+                                    <segue destination="C0X-tF-DbG" kind="show" id="phI-5Y-smK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jlq-kD-OBm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -169,10 +150,24 @@
             </objects>
             <point key="canvasLocation" x="2829.770992366412" y="-2.1126760563380285"/>
         </scene>
+        <!--Constraint View Controller-->
+        <scene sceneID="6BI-bH-Yvj">
+            <objects>
+                <viewController id="C0X-tF-DbG" customClass="ConstraintViewController" customModule="goodboy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o0o-cU-F5w">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CZH-ua-j8i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bvE-70-wHS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDD-Sn-sas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3821" y="-2"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="catEyes" width="509" height="339"/>
-        <image name="defaultcat" width="362" height="240"/>
         <image name="fish" width="612" height="511"/>
         <image name="goodboy" width="2560" height="1440"/>
         <systemColor name="systemBackgroundColor">

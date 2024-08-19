@@ -16,6 +16,7 @@
 		98849DA52C6F83C60032B48A /* CatEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98849DA42C6F83C60032B48A /* CatEatViewController.swift */; };
 		98A3A5CA2C6F85EE00ADA131 /* FishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A3A5C92C6F85EE00ADA131 /* FishViewController.swift */; };
 		98A3A5CC2C6F98D900ADA131 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A3A5CB2C6F98D900ADA131 /* FinalViewController.swift */; };
+		98ADFE5A2C736379009564F5 /* ConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ADFE592C736379009564F5 /* ConstraintViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		98849DA42C6F83C60032B48A /* CatEatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatEatViewController.swift; sourceTree = "<group>"; };
 		98A3A5C92C6F85EE00ADA131 /* FishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishViewController.swift; sourceTree = "<group>"; };
 		98A3A5CB2C6F98D900ADA131 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		98ADFE592C736379009564F5 /* ConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +64,27 @@
 		98849D8F2C6F7DE80032B48A /* goodboy */ = {
 			isa = PBXGroup;
 			children = (
+				98ADFE5B2C73AD6C009564F5 /* Views */,
 				98849D902C6F7DE80032B48A /* AppDelegate.swift */,
 				98849D922C6F7DE80032B48A /* SceneDelegate.swift */,
-				98849D942C6F7DE80032B48A /* ViewController.swift */,
-				98849DA42C6F83C60032B48A /* CatEatViewController.swift */,
-				98A3A5C92C6F85EE00ADA131 /* FishViewController.swift */,
-				98A3A5CB2C6F98D900ADA131 /* FinalViewController.swift */,
 				98849D962C6F7DE80032B48A /* Main.storyboard */,
 				98849D992C6F7DE90032B48A /* Assets.xcassets */,
 				98849D9B2C6F7DE90032B48A /* LaunchScreen.storyboard */,
 				98849D9E2C6F7DE90032B48A /* Info.plist */,
 			);
 			path = goodboy;
+			sourceTree = "<group>";
+		};
+		98ADFE5B2C73AD6C009564F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98849D942C6F7DE80032B48A /* ViewController.swift */,
+				98849DA42C6F83C60032B48A /* CatEatViewController.swift */,
+				98A3A5C92C6F85EE00ADA131 /* FishViewController.swift */,
+				98A3A5CB2C6F98D900ADA131 /* FinalViewController.swift */,
+				98ADFE592C736379009564F5 /* ConstraintViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98849D952C6F7DE80032B48A /* ViewController.swift in Sources */,
+				98ADFE5A2C736379009564F5 /* ConstraintViewController.swift in Sources */,
 				98A3A5CC2C6F98D900ADA131 /* FinalViewController.swift in Sources */,
 				98849D912C6F7DE80032B48A /* AppDelegate.swift in Sources */,
 				98849DA52C6F83C60032B48A /* CatEatViewController.swift in Sources */,
