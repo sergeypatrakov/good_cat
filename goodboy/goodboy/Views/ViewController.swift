@@ -70,9 +70,12 @@ class ViewController: UIViewController {
         ])
     }
     
-    @objc func buttonPressed() {
+    @objc func buttonPressed(_ sender: UIButton) {
         text.text = "Может покормим котика? \nДля этого нажми на него"
         text.textAlignment = .center
+        sender.isEnabled = false
+        sender.alpha = 0
     }
+    
 }
 

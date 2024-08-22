@@ -41,6 +41,7 @@ class CatEatViewController: UIViewController {
         button.backgroundColor = .lightGray
         button.setTitle("Я хочу рыбов 🐟", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(navigateToFishViewController), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -49,6 +50,11 @@ class CatEatViewController: UIViewController {
             button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
             button.heightAnchor.constraint(equalToConstant: 50),
         ])
+    }
+    
+    @objc func navigateToFishViewController() {
+        let fishViewController = FishViewController()
+        navigationController?.pushViewController(fishViewController, animated: true)
     }
 
 }
