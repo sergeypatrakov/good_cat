@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     lazy var text = UILabel()
-    lazy var button = UIButton(type: .system)
+    lazy var button = UIButton()
     lazy var image = UIImageView()
     
     override func viewDidLoad() {
@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     }
     
     func setUpLayout() {
+        view.backgroundColor = .white
+        title = "CATS 😻"
         configureImage()
         configureText()
         configureButton()
@@ -40,7 +42,7 @@ class ViewController: UIViewController {
     
     func configureText() {
         view.addSubview(text)
-        text.text = "Привет! Данное приложение позволяет тебе взаимодействовать с котиками 😻"
+        text.text = "Может покормим котика? \nДля этого нажми на него"
         text.numberOfLines = 0
         text.translatesAutoresizingMaskIntoConstraints = false
         
@@ -54,28 +56,41 @@ class ViewController: UIViewController {
     
     func configureButton() {
         view.addSubview(button)
-        button.backgroundColor = .black
-        button.setTitle("Попробуй нажать сюда)", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.setTitle("Сделать тык)", for: .normal)
         text.textAlignment = .center
         button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         
+        button.goNextView()
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-            button.heightAnchor.constraint(equalToConstant: 50),
+            button.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
     
     @objc func buttonPressed(_ sender: UIButton) {
-        text.text = "Может покормим котика? \nДля этого нажми на него"
-        text.textAlignment = .center
-        sender.isEnabled = false
-        sender.alpha = 0
+        let controller = CatEatViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
-    
 }
 
+extension UIButton {
+    func goNextView() {
+        self.layer.cornerRadius = 15
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
+        self.backgroundColor = .systemBlue
+    }
+    
+    func goToFirstView() {
+        self.layer.cornerRadius = 15
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
+        self.backgroundColor = .systemBlue
+    }
+}

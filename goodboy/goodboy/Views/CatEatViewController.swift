@@ -9,7 +9,8 @@ import UIKit
 
 class CatEatViewController: UIViewController {
     
-    lazy var button = UIButton(type: .system)
+    lazy var text = UILabel()
+    lazy var button = UIButton()
     lazy var image = UIImageView()
 
     override func viewDidLoad() {
@@ -18,8 +19,25 @@ class CatEatViewController: UIViewController {
     }
     
     func setUpLayout() {
+        view.backgroundColor = .white
         configurateImage()
+        configureText()
         configurateButton()
+    }
+    
+    func configureText() {
+        view.addSubview(text)
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.text = "Я хочу рыбов 🐟"
+        text.numberOfLines = 0
+        text.textAlignment = .center // Центрирование текста
+        
+        NSLayoutConstraint.activate([
+            text.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            text.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            text.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            text.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+        ])
     }
     
     func configurateImage() {
@@ -38,12 +56,12 @@ class CatEatViewController: UIViewController {
     
     func configurateButton() {
         view.addSubview(button)
-        button.backgroundColor = .lightGray
-        button.setTitle("Я хочу рыбов 🐟", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(navigateToFishViewController), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Дать котику рыбов", for: .normal)
         
+        button.goNextView()
+        button.addTarget(self, action: #selector(navigateToFishViewController), for: .touchUpInside)
+    
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -53,8 +71,8 @@ class CatEatViewController: UIViewController {
     }
     
     @objc func navigateToFishViewController() {
-        let fishViewController = FishViewController()
-        navigationController?.pushViewController(fishViewController, animated: true)
+        let controller = FishViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 
 }

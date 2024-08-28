@@ -8,11 +8,9 @@
 import UIKit
 
 class FishViewController: UIViewController {
-
-    @IBOutlet weak var textFishViewController: UILabel!
     
     lazy var text = UILabel()
-    lazy var button = UIButton(type: .system)
+    lazy var button = UIButton()
     lazy var image = UIImageView()
     
     override func viewDidLoad() {
@@ -61,6 +59,9 @@ class FishViewController: UIViewController {
         button.setTitle("Погладить", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         
+        button.goNextView()
+        button.addTarget(self, action: #selector(navigateToFinalViewController), for: .touchUpInside)
+        
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -69,9 +70,8 @@ class FishViewController: UIViewController {
         ])
     }
     
-//    func textFish() {
-//        textFishViewController.text = "Что-то я уже не хочу кушать, может ты меня просто погладишь?"
-//        textFishViewController.numberOfLines = 0
-//        textFishViewController.textAlignment = .center
-//    }
+    @objc func navigateToFinalViewController() {
+        let controller = FinalViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
