@@ -30,7 +30,7 @@ class CatEatViewController: UIViewController {
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = "Я хочу рыбов 🐟"
         text.numberOfLines = 0
-        text.textAlignment = .center // Центрирование текста
+        text.textAlignment = .center
         
         NSLayoutConstraint.activate([
             text.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -49,7 +49,7 @@ class CatEatViewController: UIViewController {
         NSLayoutConstraint.activate([
             image.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             image.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            image.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/3), // 1/3 от экрана
+            image.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/3),
             image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }

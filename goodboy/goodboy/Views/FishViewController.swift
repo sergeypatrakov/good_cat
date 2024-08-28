@@ -34,7 +34,7 @@ class FishViewController: UIViewController {
         NSLayoutConstraint.activate([
             image.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             image.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            image.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/4), // 1/3 от экрана
+            image.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/4),
             image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
