@@ -20,11 +20,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         let controller = ViewController()
+        controller.tabBarItem = UITabBarItem(title: "Controller", image: .init(systemName: "envelope"), tag: 0)
         
         let navigationController = UINavigationController()
         navigationController.viewControllers.append(controller)
+        navigationController.delegate = controller
         
-        window?.rootViewController = navigationController
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [navigationController,]
+        tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.tintColor = UIColor(red: 0.7, green: 0.5, blue: 0.5, alpha: 1)
+        tabBarController.tabBar.unselectedItemTintColor = UIColor(red: 0.5, green: 0.7, blue: 0.5, alpha: 1)
+        tabBarController.tabBar.backgroundColor = UIColor(white: 1, alpha: 0.9)
+        
+//        window?.rootViewController = navigationController
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 

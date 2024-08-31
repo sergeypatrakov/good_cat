@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLayout()
+        self.tabBarItem.badgeColor = .blue
     }
     
     func setUpLayout() {
@@ -75,6 +76,7 @@ class ViewController: UIViewController {
     
     @objc func buttonPressed(_ sender: UIButton) {
         let controller = CatEatViewController()
+        controller.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(controller, animated: true)
     }
 }
@@ -92,5 +94,11 @@ extension UIButton {
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.borderWidth = 1
         self.backgroundColor = .systemBlue
+    }
+}
+
+extension ViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationCOntroller: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        self.tabBarItem.badgeValue = "\(navigationCOntroller.viewControllers.count)"
     }
 }
