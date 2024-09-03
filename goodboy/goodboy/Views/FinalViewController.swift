@@ -11,6 +11,7 @@ class FinalViewController: UIViewController {
     lazy var text = UILabel()
     lazy var button = UIButton()
     lazy var image = UIImageView()
+    lazy var alertButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class FinalViewController: UIViewController {
         configurateImage()
         configurateButton()
         configurateText()
+        configureAlertButton()
     }
     
     func configurateImage() {
@@ -69,8 +71,36 @@ class FinalViewController: UIViewController {
         ])
     }
     
+    func configureAlertButton() {
+        view.addSubview(alertButton)
+        let buttonWidth: CGFloat = 120
+        let buttonHeight: CGFloat = 80
+        alertButton.frame = CGRect(x: (view.frame.width - buttonWidth) / 2, y: 300, width: buttonWidth, height: buttonHeight)
+        alertButton.setTitle("Погладить против шерсти", for: .normal)
+        alertButton.titleLabel?.textAlignment = .center
+        alertButton.titleLabel?.numberOfLines = 0
+        
+        alertButton.goNextView()
+        alertButton.addTarget(self, action: #selector(againstWool), for: .touchUpInside)
+    }
+    
     @objc func navigateToFinalViewController() {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    @objc func againstWool() {
+        someAlert()
+    }
+}
+
+extension FinalViewController {
+    func someAlert() {
+        let alertController = UIAlertController(title: "Эй, кожанный!", message: "А если тебя погладить против шерсти, а?", preferredStyle: .alert)
+        let noMoreAction = UIAlertAction(title: "Больше не буду", style: .default, handler: nil)
+        alertController.addAction(noMoreAction)
+        
+        present(alertController, animated: true) {
+            print("ALERT!")
+        }
+    }
 }
