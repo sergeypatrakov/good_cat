@@ -12,6 +12,7 @@ class CatEatViewController: UIViewController {
     lazy var text = UILabel()
     lazy var button = UIButton()
     lazy var image = UIImageView()
+    lazy var textField = UITextField()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class CatEatViewController: UIViewController {
         configurateImage()
         configureText()
         configurateButton()
+        configurateTextField()
     }
     
     func configureText() {
@@ -68,6 +70,22 @@ class CatEatViewController: UIViewController {
             button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
             button.heightAnchor.constraint(equalToConstant: 50),
         ])
+    }
+    
+    func configurateTextField() {
+        view.addSubview(textField)
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.borderStyle = .roundedRect
+        textField.placeholder = "Сколько рыбов дать котику?"
+        textField.keyboardType = .numberPad
+        
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 32),
+            textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            textField.heightAnchor.constraint(equalToConstant: 40)
+        ])
+
     }
     
     @objc func navigateToFishViewController() {
