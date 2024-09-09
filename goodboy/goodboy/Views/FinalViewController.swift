@@ -89,7 +89,8 @@ class FinalViewController: UIViewController {
     }
     
     @objc func againstWool() {
-        someAlert()
+//        someAlert()
+        navigationController?.pushViewController(SomeTableViewController(), animated: true)
     }
 }
 

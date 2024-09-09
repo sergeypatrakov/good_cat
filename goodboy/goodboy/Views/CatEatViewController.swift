@@ -12,7 +12,7 @@ class CatEatViewController: UIViewController {
     lazy var text = UILabel()
     lazy var button = UIButton()
     lazy var image = UIImageView()
-    lazy var textField = UITextField()
+    var textField = UITextField()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,15 +74,18 @@ class CatEatViewController: UIViewController {
     
     func configurateTextField() {
         view.addSubview(textField)
-        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.delegate = self
         textField.borderStyle = .roundedRect
         textField.placeholder = "Сколько рыбов дать котику?"
         textField.keyboardType = .numberPad
-        
+        textField.keyboardAppearance = .dark
+        textField.clearButtonMode = .always
+
+        textField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            textField.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 32),
-            textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            textField.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -20),
+            textField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             textField.heightAnchor.constraint(equalToConstant: 40)
         ])
 
@@ -93,4 +96,12 @@ class CatEatViewController: UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
 
+}
+
+extension CatEatViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == textField { textField.becomeFirstResponder() }
+        return true
+    }
+    
 }

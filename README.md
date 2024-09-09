@@ -1,6 +1,9 @@
 # good_cat
 
-Просто антистресс приложение про котика при использовании Storyboard & ViewController
+Просто антистресс приложение про котика на UIKit без использования Storyboard
 
-[<img align="left" alt="Cat_1" width="300px" src="./screenshots/1.png"/>]
-[<img align="left" alt="Cat_2" width="300px" src="./screenshots/2.png"/>]
+<p float="left">
+  <img src="./screenshots/1.png" width=32%/>
+  <img src="./screenshots/2.png" width=32%/>
+  <img src="./screenshots/3.png" width=32%/>
+</p>

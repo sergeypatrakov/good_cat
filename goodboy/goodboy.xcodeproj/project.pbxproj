@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		980FF7122C7F9255000690DC /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980FF7112C7F9255000690DC /* FinalViewController.swift */; };
+		981880962C8B89F8004F215F /* SomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981880952C8B89F8004F215F /* SomeTableViewController.swift */; };
 		98849D912C6F7DE80032B48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98849D902C6F7DE80032B48A /* AppDelegate.swift */; };
 		98849D932C6F7DE80032B48A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98849D922C6F7DE80032B48A /* SceneDelegate.swift */; };
 		98849D952C6F7DE80032B48A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98849D942C6F7DE80032B48A /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		980FF7112C7F9255000690DC /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		981880952C8B89F8004F215F /* SomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTableViewController.swift; sourceTree = "<group>"; };
 		98849D8D2C6F7DE80032B48A /* goodboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goodboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98849D902C6F7DE80032B48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98849D922C6F7DE80032B48A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				98849DA42C6F83C60032B48A /* CatEatViewController.swift */,
 				98A3A5C92C6F85EE00ADA131 /* FishViewController.swift */,
 				980FF7112C7F9255000690DC /* FinalViewController.swift */,
+				981880952C8B89F8004F215F /* SomeTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				98849D912C6F7DE80032B48A /* AppDelegate.swift in Sources */,
 				98849DA52C6F83C60032B48A /* CatEatViewController.swift in Sources */,
 				98A3A5CA2C6F85EE00ADA131 /* FishViewController.swift in Sources */,
+				981880962C8B89F8004F215F /* SomeTableViewController.swift in Sources */,
 				98849D932C6F7DE80032B48A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
